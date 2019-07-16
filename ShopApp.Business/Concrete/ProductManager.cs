@@ -19,22 +19,18 @@ namespace ShopApp.Business.Concrete
         {
             _productService.Create(entity);
         }
-
         public void Delete(Product entity)
         {
             _productService.Delete(entity);
         }
-
         public IEnumerable<Product> GetAll()
         {
             return _productService.GetAll();
         }
-
         public Product GetById(int id)
         {
             return _productService.GetById(id);
         }
-
         public void Update(Product entity)
         {
             _productService.Update(entity);
