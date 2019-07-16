@@ -19,22 +19,18 @@ namespace ShopApp.Business.Concrete
         {
             _categoryService.Create(entity);
         }
-
         public void Delete(Category entity)
         {
             _categoryService.Delete(entity);
         }
-
         public IEnumerable<Category> GetAll()
         {
             return _categoryService.GetAll();
         }
-
         public Category GetById(int id)
         {
             return _categoryService.GetById(id);
         }
-
         public void Update(Category entity)
         {
             _categoryService.Update(entity);
