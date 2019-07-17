@@ -23,6 +23,7 @@ namespace ShopApp.DataAccess.Concrete.EfCore
                     context.Products.AddRange(Products);
                 }
 
+               
                 context.SaveChanges();
             }
         }
@@ -43,5 +44,7 @@ namespace ShopApp.DataAccess.Concrete.EfCore
             new Product(){ Name = "Lenovo Ideapad", Price=2000, ImageUrl="6.jpg" },
             new Product(){ Name = "Samsung", Price=2000, ImageUrl="7.jpg" },
         };
+
+        
     }
 }
