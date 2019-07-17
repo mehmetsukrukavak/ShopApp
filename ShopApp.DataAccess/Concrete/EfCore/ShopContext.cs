@@ -10,9 +10,15 @@ namespace ShopApp.DataAccess.Concrete.EfCore
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(LocalDB)\MSSQLLocalDB;Database=ShopDb;integrated security=true;");
+            optionsBuilder.UseSqlServer(@"Data Source=94.73.170.2;Initial Catalog=u7986620_dbTest; User Id=u7986620_dbAdm;Password=EsrA!1808;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProductCategory>().HasKey(pc => new { pc.CategoryId, pc.ProductId });
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }
