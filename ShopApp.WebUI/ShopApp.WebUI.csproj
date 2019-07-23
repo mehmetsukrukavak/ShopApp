@@ -20,5 +20,14 @@
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="package.json">
+      <IncludeInPackage>false</IncludeInPackage>
+    </Content>
   </ItemGroup>
 </Project>
