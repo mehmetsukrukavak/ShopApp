@@ -22,7 +22,8 @@ namespace ShopApp.WebUI.Controllers
         public IActionResult Index()
         {
             return View(new ProductListModel() {
-                Products = _productService.GetAll().ToList()
+                Products = _productService.GetAll().ToList(),
+                Categories = _categoryService.GetAll().ToList()
             });
         }
     }
